@@ -1,5 +1,8 @@
 import { type PageProps } from "$fresh/server.ts";
-export default function App({ Component }: PageProps) {
+import { Footer } from "../components/Footer.tsx";
+import Header from "../components/Header.tsx";
+
+export default function App(props: PageProps) {
   return (
     <html>
       <head>
@@ -10,7 +13,13 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <Component />
+        <div className="flex flex-col min-h-dvh px-44 py-6">
+          <Header active={props.route} />
+          <main className="h-full w-full py-12">
+            <props.Component />
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
