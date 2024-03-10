@@ -1,7 +1,7 @@
 import { Handlers } from "$fresh/server.ts";
 
 export const handler: Handlers = {
-  async GET(_req, ctx) {
+  async GET(_req) {
     const token = Deno.env.get("SIZUME_API_TOKEN");
 
     const response = await fetch(
