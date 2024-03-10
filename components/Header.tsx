@@ -17,7 +17,7 @@ export default function Header({ active }: Props) {
         <div className="flex items-center gap-1">
           <MoodHappy aria-hidden="true" />
           <div className="text-2xl ml-1 font-bold">
-            sttnbnb
+            Honjitsu
           </div>
         </div>
         <ul class="flex items-center gap-6">

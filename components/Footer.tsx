@@ -17,7 +17,7 @@ export default function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <a href="https://github.com/shmn7iii/tranquil">
+            <a href="https://github.com/shmn7iii/honjitsu">
               <BrandGithub aria-hidden="true" color="gray" />
             </a>
           </div>
