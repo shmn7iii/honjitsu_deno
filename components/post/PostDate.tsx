@@ -15,7 +15,7 @@ export default function PostDate({ loading, date }: Props) {
 
   return (
     <>
-      <h2 className="text-xl md:text-xl text-gray-500 text-center mt-2 mb-6">
+      <h2 className="text-md md:text-xl text-gray-500 text-center mt-2 mb-6">
         {date}
       </h2>
     </>
