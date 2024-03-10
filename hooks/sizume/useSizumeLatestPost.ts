@@ -28,7 +28,7 @@ export const useSizumeLatestPost = (): useSizumeLatestPostResult => {
 
     try {
       const postsResponse = await fetch(
-        new URL("http://localhost:8000/api/posts"),
+        "./api/posts",
         {
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export const useSizumeLatestPost = (): useSizumeLatestPostResult => {
 
       const slug = postsData.posts[0].slug;
       const response = await fetch(
-        new URL(`http://localhost:8000/api/posts/${slug}`),
+        `./api/posts/${slug}`,
         {
           headers: {
             "Content-Type": "application/json",
