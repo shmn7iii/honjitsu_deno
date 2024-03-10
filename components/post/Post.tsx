@@ -10,7 +10,7 @@ type Props = {
 
 export default function Post({ loading, title, body }: Props) {
   return (
-    <div className="w-[650px]">
+    <div className="max-w-[640px] md:w-[640px]">
       <PostTitle loading={loading} title={title?.split(" ")[1] || null} />
       <PostDate loading={loading} date={title?.split(" ")[0] || null} />
       <PostBody loading={loading} body={body} />

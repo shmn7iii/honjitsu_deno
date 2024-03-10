@@ -6,15 +6,13 @@ type Props = {
 export default function PostBody({ loading, body }: Props) {
   if (loading || body == null) {
     return (
-      <div role="status" className="">
+      <div role="status">
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full w-64 mb-2.5"></div>
+        <div class="h-3 bg-gray-200 rounded-full w-64 mb-6"></div>
 
-        <div class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded ">
+        <div class="flex items-center justify-center h-48 mb-6 bg-gray-300 rounded ">
           <svg
             class="w-10 h-10 text-gray-200 "
             aria-hidden="true"
@@ -33,9 +31,7 @@ export default function PostBody({ loading, body }: Props) {
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div class="h-3 bg-gray-200 rounded-full w-64"></div>
         <span class="sr-only">Loading...</span>
       </div>
     );
@@ -44,7 +40,7 @@ export default function PostBody({ loading, body }: Props) {
   return (
     <>
       <div
-        className="prose prose-img:h-auto prose-img:max-w-lg prose-img:mx-auto prose-img:rounded-lg prose-img:shadow-xl"
+        className="prose-sm md:prose prose-img:h-auto prose-img:max-w-auto md:prose-img:max-w-lg prose-img:mx-auto prose-img:rounded-lg prose-img:shadow-xl"
         dangerouslySetInnerHTML={{ __html: body }}
       >
       </div>

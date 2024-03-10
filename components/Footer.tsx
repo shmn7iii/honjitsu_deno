@@ -1,6 +1,6 @@
 import BrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.6/tsx/brand-github.tsx";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="mt-auto w-full">
       <div className="py-2">
