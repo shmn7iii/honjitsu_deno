@@ -12,6 +12,7 @@ export function LatestPost() {
   return (
     <Post
       loading={loading}
+      slug={result?.post.slug || null}
       title={result?.post.title || null}
       body={result?.post.bodyHtml || null}
     />
