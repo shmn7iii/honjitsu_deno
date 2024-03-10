@@ -9,7 +9,7 @@ export default function App(props: PageProps) {
         <meta charset="utf-8" />
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>tranquil</title>
+        <title>sttnbnb</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
