@@ -7,7 +7,7 @@ type Props = {
 export default function Header({ active }: Props) {
   const menus = [
     { name: "Today", href: "/" },
-    { name: "Previous", href: "/posts" },
+    { name: "Previous", href: "/previous" },
     { name: "Kaihei ↗︎", href: "https://kaihei.shmn7iii.net/" },
   ];
 

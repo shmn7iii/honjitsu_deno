@@ -7,6 +7,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $api_posts_slug_ from "./routes/api/posts/[slug].ts";
 import * as $api_posts_index from "./routes/api/posts/index.ts";
 import * as $index from "./routes/index.tsx";
+import * as $previous from "./routes/previous.tsx";
 import * as $LatestPost from "./islands/LatestPost.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -17,6 +18,7 @@ const manifest = {
     "./routes/api/posts/[slug].ts": $api_posts_slug_,
     "./routes/api/posts/index.ts": $api_posts_index,
     "./routes/index.tsx": $index,
+    "./routes/previous.tsx": $previous,
   },
   islands: {
     "./islands/LatestPost.tsx": $LatestPost,
