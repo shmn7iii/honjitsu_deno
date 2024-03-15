@@ -1,16 +1,18 @@
 import { type PageProps } from "$fresh/server.ts";
-import Footer from "../components/Footer.tsx";
-import Header from "../components/Header.tsx";
 
-export default function App(props: PageProps) {
+export default function App({ Component }: PageProps) {
   return (
-    <html>
+    <html lang="ja">
       <head prefix="og: https://ogp.me/ns#">
         <meta charset="utf-8" />
+
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Honjitsu</title>
+
         <link rel="stylesheet" href="/styles.css" />
+
         <meta property="og:url" content={Deno.env.get("DEPLOY_URL")} />
         <meta property="og:title" content={"Honjitsu"} />
         <meta property="og:description" content={"Honjitsu"} />
@@ -28,13 +30,7 @@ export default function App(props: PageProps) {
         />
       </head>
       <body>
-        <div className="flex flex-col min-h-dvh px-12 py-6 lg:px-44">
-          <Header active={props.route} />
-          <main className="h-full w-full py-12">
-            <props.Component />
-          </main>
-          <Footer />
-        </div>
+        <Component />
       </body>
     </html>
   );
