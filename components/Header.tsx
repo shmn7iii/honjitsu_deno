@@ -14,18 +14,20 @@ export default function Header({ active }: Props) {
   return (
     <header className="w-full">
       <div className="flex flex-col md:flex-row justify-between gap-4">
-        <div className="flex items-center gap-1">
-          <MoodHappy aria-hidden="true" />
-          <div className="text-2xl ml-1 font-bold">
-            Honjitsu
+        <a href="/">
+          <div className="flex items-center gap-1">
+            <MoodHappy aria-hidden="true" />
+            <div className="text-2xl ml-1 font-bold">
+              Honjitsu
+            </div>
           </div>
-        </div>
-        <ul class="flex items-center gap-6">
+        </a>
+        <ul className="flex items-center gap-6">
           {menus.map((menu) => (
             <li>
               <a
                 href={menu.href}
-                class={"text-gray-500 hover:text-gray-700 py-1 border-gray-500" +
+                className={"text-gray-500 hover:text-gray-700 py-1 border-gray-500" +
                   (menu.href === active ? " font-bold border-b-2" : "")}
               >
                 {menu.name}

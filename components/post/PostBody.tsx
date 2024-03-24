@@ -7,14 +7,14 @@ export default function PostBody({ loading, body }: Props) {
   if (loading || body == null) {
     return (
       <div role="status">
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full w-64 mb-6"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full w-64 mb-6"></div>
 
-        <div class="flex items-center justify-center h-48 mb-6 bg-gray-300 rounded ">
+        <div className="flex items-center justify-center h-48 mb-6 bg-gray-300 rounded ">
           <svg
-            class="w-10 h-10 text-gray-200 "
+            className="w-10 h-10 text-gray-200 "
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -25,14 +25,14 @@ export default function PostBody({ loading, body }: Props) {
           </svg>
         </div>
 
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full mb-2.5"></div>
-        <div class="h-3 bg-gray-200 rounded-full w-64"></div>
-        <span class="sr-only">Loading...</span>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
+        <div className="h-3 bg-gray-200 rounded-full w-64"></div>
+        <span className="sr-only">Loading...</span>
       </div>
     );
   }
