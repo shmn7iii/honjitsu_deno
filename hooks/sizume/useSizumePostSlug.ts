@@ -20,18 +20,18 @@ export const useSizumePostSlug = (
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Response | null>(null);
 
-  // TODO: move to .env
-  const url = `http://localhost:8000/api/posts/${slug}`;
-
   const getSizumePostSlug = async () => {
     setLoading(true);
 
     try {
-      const response = await fetch(new URL(url), {
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `posts/${slug}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         },
-      });
+      );
       const data = (await response.json()) as Response;
 
       setResult(data);
