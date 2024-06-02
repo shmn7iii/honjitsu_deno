@@ -5,7 +5,7 @@ export interface Response {
   post: Post;
 }
 
-export type useSizumePostSlugResult = [
+export type useSizumePostResult = [
   {
     loading: boolean;
     error: string | null;
@@ -13,14 +13,14 @@ export type useSizumePostSlugResult = [
   },
 ];
 
-export const useSizumePostSlug = (
+export const useSizumePost = (
   slug: string,
-): useSizumePostSlugResult => {
+): useSizumePostResult => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Response | null>(null);
 
-  const getSizumePostSlug = async () => {
+  const getSizumePost = async () => {
     setLoading(true);
 
     try {
@@ -43,7 +43,7 @@ export const useSizumePostSlug = (
   };
 
   useEffect(() => {
-    getSizumePostSlug();
+    getSizumePost();
   }, []);
 
   return [{ loading, error, result }];
