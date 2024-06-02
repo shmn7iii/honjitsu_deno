@@ -6,7 +6,7 @@ type Props = {
 export default function PostBody({ loading, body }: Props) {
   if (loading || body == null) {
     return (
-      <div role="status">
+      <div>
         <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>
         <div className="h-3 bg-gray-200 rounded-full mb-2.5"></div>

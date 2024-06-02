@@ -14,10 +14,8 @@ export default function PostTitle({ loading, title }: Props) {
   }
 
   return (
-    <>
-      <h1 className="text-2xl md:text-4xl font-extrabold text-center my-2">
-        {title}
-      </h1>
-    </>
+    <h1 className="text-2xl md:text-4xl font-extrabold text-center my-2">
+      {title}
+    </h1>
   );
 }
