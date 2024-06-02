@@ -8,7 +8,6 @@ export default function Header({ active }: Props) {
   const menus = [
     { name: "Today", href: "/" },
     { name: "Previous", href: "/previous" },
-    { name: "Kaihei ↗︎", href: "https://kaihei.shmn7iii.net/" },
   ];
 
   return (
