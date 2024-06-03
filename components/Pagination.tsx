@@ -3,35 +3,42 @@ import ArrowBadgeLeft from "https://deno.land/x/tabler_icons_tsx@0.0.6/tsx/arrow
 import ArrowBadgeRight from "https://deno.land/x/tabler_icons_tsx@0.0.6/tsx/arrow-badge-right.tsx";
 
 type Props = {
+  date: string;
   currentPostIndex: number;
   setCurrentPostIndex: (index: number) => void;
 };
 
 export default function Pagination(
-  { currentPostIndex, setCurrentPostIndex }: Props,
+  { date, currentPostIndex, setCurrentPostIndex }: Props,
 ) {
   return (
     <div className="flex mb-8">
       <button
         onClick={() => setCurrentPostIndex(currentPostIndex - 1)}
         disabled={currentPostIndex == 0}
-        className={"flex items-center justify-center px-3 h-8 me-3 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700" +
-          (currentPostIndex == 0 ? " bg-gray-100 text-gray-500 cursor-not-allowed" : " bg-white text-gray-700")}
+        className={"mx-1 px-2 h-8 text-sm font-medium rounded-lg" +
+          (currentPostIndex == 0 ? " text-gray-300 cursor-not-allowed" : " text-gray-700")}
       >
         <ArrowBadgeLeft aria-hidden="true" size={20} />
       </button>
-      <button
-        onClick={() => setCurrentPostIndex(0)}
-        className="flex items-center justify-center px-3 h-8 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
-      >
-        <CalendarSmile aria-hidden="true" size={20} className="me-2" />
-        Today
-      </button>
+
+      <div className="flex">
+        <button
+          onClick={() => setCurrentPostIndex(0)}
+          className="inline-flex items-center mx-0 h-8 px-3 text-gray-500 border border-e-0 border-gray-300 rounded-e-0 rounded-s-lg hover:text-gray-700 hover:bg-gray-100"
+        >
+          <CalendarSmile aria-hidden="true" size={20} />
+        </button>
+        <div className="flex items-center justify-center h-8 w-32 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-s-0 rounded-e-lg">
+          {date}
+        </div>
+      </div>
+
       <button
         onClick={() => setCurrentPostIndex(currentPostIndex + 1)}
         disabled={currentPostIndex == 29}
-        className={"flex items-center justify-center px-3 h-8 me-3 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700" +
-          (currentPostIndex == 29 ? " bg-gray-100 text-gray-500 cursor-not-allowed" : " bg-white text-gray-700")}
+        className={"mx-1 px-2 h-8 text-sm font-medium rounded-lg" +
+          (currentPostIndex == 29 ? " text-gray-300 cursor-not-allowed" : " text-gray-700")}
       >
         <ArrowBadgeRight aria-hidden="true" size={20} />
       </button>
