@@ -25,7 +25,7 @@ export const useSizumePost = (
 
     try {
       const response = await fetch(
-        `posts/${slug}`,
+        `./api/posts/${slug}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export const useSizumePost = (
 
   useEffect(() => {
     getSizumePost();
-  }, []);
+  }, [slug]);
 
   return [{ loading, error, result }];
 };

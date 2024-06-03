@@ -1,5 +1,5 @@
-import { LatestPost } from "../islands/LatestPost.tsx";
+import { Index } from "../islands/Index.tsx";
 
 export default function Home() {
-  return <LatestPost />;
+  return <Index />;
 }

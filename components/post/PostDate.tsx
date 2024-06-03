@@ -1,18 +1,8 @@
 type Props = {
-  loading: boolean;
-  date: string | null;
+  date: string;
 };
 
-export default function PostDate({ loading, date }: Props) {
-  if (loading || date == null) {
-    return (
-      <div className="flex justify-center">
-        <div className="h-5 bg-gray-200 rounded-full w-32 md:w-40 mt-2 mb-6">
-        </div>
-      </div>
-    );
-  }
-
+export default function PostDate({ date }: Props) {
   return (
     <h2 className="text-md md:text-xl text-gray-500 text-center mt-2 mb-6">
       {date}

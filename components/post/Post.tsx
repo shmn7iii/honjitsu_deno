@@ -4,19 +4,18 @@ import PostTitle from "./PostTitle.tsx";
 import SendLetterButton from "./SendLetterButton.tsx";
 
 type Props = {
-  loading: boolean;
-  slug: string | null;
-  title: string | null;
-  body: string | null;
+  slug: string;
+  title: string;
+  body: string;
 };
 
-export default function Post({ loading, slug, title, body }: Props) {
+export default function Post({ slug, title, body }: Props) {
   return (
     <div className="max-w-[640px] md:w-[640px]">
-      <PostTitle loading={loading} title={title?.split(" ")[1] || null} />
-      <PostDate loading={loading} date={title?.split(" ")[0] || null} />
-      <PostBody loading={loading} body={body} />
-      <SendLetterButton loading={loading} slug={slug || "dummy"} />
+      <PostTitle title={title?.split(" ")[1]} />
+      <PostDate date={title?.split(" ")[0]} />
+      <PostBody body={body} />
+      <SendLetterButton slug={slug} />
     </div>
   );
 }
