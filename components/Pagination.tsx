@@ -16,9 +16,7 @@ export default function Pagination(
         onClick={() => setCurrentPostIndex(currentPostIndex - 1)}
         disabled={currentPostIndex == 0}
         className={"flex items-center justify-center px-3 h-8 me-3 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700" +
-          (currentPostIndex == 0
-            ? " bg-gray-100 text-gray-500 cursor-not-allowed"
-            : " bg-white text-gray-700")}
+          (currentPostIndex == 0 ? " bg-gray-100 text-gray-500 cursor-not-allowed" : " bg-white text-gray-700")}
       >
         <SignLeft aria-hidden="true" size={20} className="me-1" />
         Tomorrow
@@ -34,9 +32,7 @@ export default function Pagination(
         onClick={() => setCurrentPostIndex(currentPostIndex + 1)}
         disabled={currentPostIndex == 29}
         className={"flex items-center justify-center px-3 h-8 me-3 text-sm font-medium border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700" +
-          (currentPostIndex == 29
-            ? " bg-gray-100 text-gray-500 cursor-not-allowed"
-            : " bg-white text-gray-700")}
+          (currentPostIndex == 29 ? " bg-gray-100 text-gray-500 cursor-not-allowed" : " bg-white text-gray-700")}
       >
         Yesterday
         <SignRight aria-hidden="true" size={20} className="ms-1" />

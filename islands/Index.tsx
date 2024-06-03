@@ -8,8 +8,7 @@ import PostSkeleton from "../components/post/PostSkeleton.tsx";
 
 export function Index() {
   const [currentPostIndex, setCurrentPostIndex] = useState<number>(0);
-  const [{ loading: loadingPosts, error: errorPosts, result: resultPosts }] =
-    useSizumePosts();
+  const [{ loading: loadingPosts, error: errorPosts, result: resultPosts }] = useSizumePosts();
 
   if (loadingPosts || !resultPosts) {
     return (
@@ -26,8 +25,9 @@ export function Index() {
     return <Error message={errorPosts} />;
   }
 
-  const [{ loading: loadingPost, error: errorPost, result: resultPost }] =
-    useSizumePost(resultPosts.posts[currentPostIndex].slug);
+  const [{ loading: loadingPost, error: errorPost, result: resultPost }] = useSizumePost(
+    resultPosts.posts[currentPostIndex].slug,
+  );
 
   if (loadingPost || !resultPost) {
     return (
