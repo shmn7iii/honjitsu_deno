@@ -1,7 +1,9 @@
 {
   "lock": false,
   "tasks": {
-    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "fmt": "deno fmt -c deno.json",
+    "lint": "deno lint -c deno.json",
+    "check": "deno fmt --check -c deno.json && deno lint -c deno.json && deno check **/*.ts && deno check **/*.tsx",
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
     "start": "deno run -A --watch=static/,routes/ dev.ts",
@@ -9,7 +11,18 @@
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
-  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"]
+    }
+  },
+  "fmt": {
+    "exclude": ["node_modules", "README.md"],
+    "lineWidth": 120,
+    "semiColons": true,
+    "singleQuote": false,
+    "useTabs": false
+  },
   "exclude": ["**/_fresh/*"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
