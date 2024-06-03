@@ -14,6 +14,7 @@ export function Index() {
     return (
       <>
         <Pagination
+          date={""}
           currentPostIndex={currentPostIndex}
           setCurrentPostIndex={setCurrentPostIndex}
         />
@@ -31,12 +32,11 @@ export function Index() {
 
   if (loadingPost || !resultPost) {
     return (
-      <>
-        <Pagination
-          currentPostIndex={currentPostIndex}
-          setCurrentPostIndex={setCurrentPostIndex}
-        />
-      </>
+      <Pagination
+        date={""}
+        currentPostIndex={currentPostIndex}
+        setCurrentPostIndex={setCurrentPostIndex}
+      />
     );
   }
   if (errorPost) {
@@ -46,6 +46,7 @@ export function Index() {
   return (
     <>
       <Pagination
+        date={resultPost.post.title.split(" ")[0]}
         currentPostIndex={currentPostIndex}
         setCurrentPostIndex={setCurrentPostIndex}
       />
