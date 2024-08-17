@@ -22,16 +22,8 @@ export default function Pagination(
         <ArrowBadgeLeft aria-hidden="true" size={20} />
       </button>
 
-      <div className="flex">
-        <button
-          onClick={() => setCurrentPostIndex(0)}
-          className="inline-flex items-center mx-0 h-8 px-3 text-gray-500 border border-e-0 border-gray-300 rounded-e-0 rounded-s-lg hover:text-gray-700 hover:bg-gray-100"
-        >
-          <CalendarSmile aria-hidden="true" size={20} />
-        </button>
-        <div className="flex items-center justify-center h-8 w-32 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-s-0 rounded-e-lg">
-          {date}
-        </div>
+      <div className="flex items-center justify-center h-8 w-32 text-sm font-medium text-gray-500 ">
+        {date}
       </div>
 
       <button
