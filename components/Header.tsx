@@ -5,10 +5,10 @@ type Props = {
 };
 
 export default function Header({ active }: Props) {
-  const menus = [
-    { name: "Today", href: "/" },
-    { name: "Previous", href: "/previous" },
-  ];
+  // const menus = [
+  //   { name: "Today", href: "/" },
+  //   { name: "Previous", href: "/previous" },
+  // ];
 
   return (
     <header className="w-full">
@@ -21,7 +21,8 @@ export default function Header({ active }: Props) {
             </div>
           </div>
         </a>
-        <ul className="flex items-center gap-6">
+        {
+          /* <ul className="flex items-center gap-6">
           {menus.map((menu) => (
             <li key={menu.name}>
               <a
@@ -33,7 +34,8 @@ export default function Header({ active }: Props) {
               </a>
             </li>
           ))}
-        </ul>
+        </ul> */
+        }
       </div>
     </header>
   );
