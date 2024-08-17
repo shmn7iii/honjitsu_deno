@@ -12,7 +12,7 @@ export default function Pagination(
   { date, currentPostIndex, setCurrentPostIndex }: Props,
 ) {
   return (
-    <div className="flex mb-8">
+    <div className="flex mb-6">
       <button
         onClick={() => setCurrentPostIndex(currentPostIndex - 1)}
         disabled={currentPostIndex == 0}
