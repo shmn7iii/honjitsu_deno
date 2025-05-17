@@ -11,7 +11,7 @@ import * as $index from "./routes/index.tsx";
 import * as $previous_slug_ from "./routes/previous/[slug].ts";
 import * as $previous_index from "./routes/previous/index.tsx";
 import * as $Index from "./islands/Index.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
