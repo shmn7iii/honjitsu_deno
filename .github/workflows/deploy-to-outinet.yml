@@ -28,6 +28,6 @@ jobs:
             --restart unless-stopped \
             -p 80:8000 \
             -e DEPLOY_URL=${{ secrets.DEPLOY_URL }} \
-            -e SIZUME_API_URL=${{ github.SIZUME_API_URL }} \
-            -e SIZUME_API_TOKEN=${{ github.SIZUME_API_TOKEN }} \
+            -e SIZUME_API_URL=${{ secrets.SIZUME_API_URL }} \
+            -e SIZUME_API_TOKEN=${{ secrets.SIZUME_API_TOKEN }} \
             honjitsu
