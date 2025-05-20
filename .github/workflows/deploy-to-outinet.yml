@@ -1,0 +1,33 @@
+name: Deploy to outinet-hosted runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: [outinet-hosted-runner]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Stop and remove containers
+        run: |
+          docker rm -f honjistu || true
+
+      - name: Build docker images
+        run: |
+          docker build --build-arg GIT_REVISION=$(git rev-parse HEAD) -t honjitsu .
+
+      - name: Run docker containers
+        run: |
+          docker run \
+            -d \
+            --name honjistu \
+            --restart unless-stopped \
+            -p 80:8000 \
+            -e DEPLOY_URL=${{ secrets.DEPLOY_URL }} \
+            -e SIZUME_API_URL=${{ github.SIZUME_API_URL }} \
+            -e SIZUME_API_TOKEN=${{ github.SIZUME_API_TOKEN }} \
+            honjitsu
